@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Questions - Knowledge Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 text-gray-800">
+
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
+        Explore Questions
+      </h1>
+      <p class="text-gray-600 text-lg">Browse or search questions from our community</p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="flex justify-center mb-8">
+      <input type="text" id="searchInput" placeholder="Search questions..."
+        class="w-full max-w-xl px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <!-- Questions List -->
+    <div id="questionsList" class="space-y-6">
+      <!-- Questions will be injected here -->
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        title: "How to use React Context API effectively?",
+        author: "Alex Rodriguez",
+        answers: 4,
+        tags: ["React", "Context", "JavaScript"]
+      },
+      {
+        title: "What is the difference between let, const, and var?",
+        author: "Sarah Chen",
+        answers: 6,
+        tags: ["JavaScript", "ES6"]
+      },
+      {
+        title: "How to optimize performance in React?",
+        author: "Michael Kumar",
+        answers: 3,
+        tags: ["React", "Optimization", "Performance"]
+      }
+    ];
+
+    const questionsList = document.getElementById('questionsList');
+    const searchInput = document.getElementById('searchInput');
+
+    function renderQuestions(filtered = questions) {
+      questionsList.innerHTML = "";
+      filtered.forEach(q => {
+        const el = document.createElement('div');
+        el.className = "bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition";
+
+        el.innerHTML = `
+          <h2 class="text-xl font-semibold text-blue-600 mb-1">${q.title}</h2>
+          <p class="text-sm text-gray-500 mb-2">Asked by <span class="font-medium">${q.author}</span></p>
+          <div class="flex flex-wrap gap-2 mb-2">
+            ${q.tags.map(tag => `<span class="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">${tag}</span>`).join('')}
+          </div>
+          <p class="text-sm text-green-600 font-medium">${q.answers} Answers</p>
+        `;
+
+        questionsList.appendChild(el);
+      });
+    }
+
+    renderQuestions();
+
+    searchInput.addEventListener('input', () => {
+      const keyword = searchInput.value.toLowerCase();
+      const filtered = questions.filter(q => q.title.toLowerCase().includes(keyword));
+      renderQuestions(filtered);
+    });
+  </script>
+
+</body>
+</html>
