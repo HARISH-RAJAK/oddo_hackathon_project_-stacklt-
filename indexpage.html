@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Knowledge Hub - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .glow-circle {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(100px);
+      opacity: 0.4;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="relative bg-gradient-to-br from-blue-100 via-white to-purple-100 min-h-screen font-sans overflow-hidden">
+
+  <!-- Glowing Background Elements -->
+  <div class="glow-circle w-96 h-96 bg-blue-300 top-[-100px] left-[-100px] animate-pulse"></div>
+  <div class="glow-circle w-96 h-96 bg-purple-400 bottom-[-120px] right-[-120px] animate-pulse delay-1000"></div>
+  <div class="glow-circle w-80 h-80 bg-pink-300 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">📘 Knowledge Hub</h1>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 relative z-10">
+    <h2 class="text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent bg-clip-text mb-4">
+      Welcome to Knowledge Hub
+    </h2>
+    <p class="text-gray-700 text-lg max-w-2xl mx-auto">
+      Explore all pages of this full-featured developer community project with beautifully crafted HTML, CSS, and JavaScript.
+    </p>
+  </section>
+
+  <!-- Pages Grid with Buttons -->
+  <section class="py-12 relative z-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-purple-700 text-center mb-8">🚀 Project Pages</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <!-- Button Cards -->
+        <a href="landing.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Landing Page</span></div></a>
+        <a href="login.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Login Page</span></div></a>
+        <a href="register.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Register Page</span></div></a>
+        <a href="leaderboard.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Leaderboard Page</span></div></a>
+        <a href="profile.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Profile Page</span></div></a>
+        <a href="ask.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Ask Question Page</span></div></a>
+        <a href="answer.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Answer Page</span></div></a>
+        <a href="about.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">About Page</span></div></a>
+        <a href="contact.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">Contact Page</span></div></a>
+        <a href="faq.html" class="group"><div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transform hover:scale-105 transition text-center"><span class="text-blue-600 font-bold text-lg">FAQ Page</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-sm text-gray-500 relative z-10">
+    &copy; 2025 Knowledge Hub. Made with ❤️ in HTML.
+  </footer>
+</body>
+</html>
