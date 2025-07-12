@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackIt - Knowledge Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 via-white to-purple-50 text-gray-900">
+
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="/" class="flex items-center space-x-2 group">
+            <div class="relative">
+              <svg class="h-8 w-8 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <div class="absolute inset-0 bg-blue-600 group-hover:bg-purple-600 opacity-20 rounded-full blur-sm transition-all duration-300"></div>
+            </div>
+            <span class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              StackIt
+            </span>
+          </a>
+          <nav class="hidden lg:flex items-center space-x-4">
+            <a href="/questions" class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition">Questions</a>
+            <a href="/leaderboard" class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition">Leaderboard</a>
+            <a href="/tags" class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition">Tags</a>
+            <a href="/users" class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition">Users</a>
+          </nav>
+          <div class="hidden md:flex relative max-w-sm w-full">
+            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"/></svg>
+            <input type="text" placeholder="Search questions..." class="pl-10 bg-gray-50 border border-gray-200 rounded-md py-2 px-3 focus:bg-white focus:border-blue-300 transition-all duration-200 w-full" />
+          </div>
+          <div class="hidden md:flex items-center space-x-2">
+            <a href="/login" class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 transition">Sign In</a>
+            <a href="/register" class="px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md hover:from-blue-700 hover:to-purple-700 transition">Sign Up</a>
+            <a href="/profile" class="p-2 rounded-md hover:bg-gray-100 transition">
+              <svg class="h-4 w-4 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <section class="text-center mb-12">
+        <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
+          Knowledge Hub
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Ask questions, share knowledge, and learn from our amazing developer community.
+          Your journey to becoming a better programmer starts here!
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="/questions" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 text-lg rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            Explore Questions
+          </a>
+          <a href="/leaderboard" class="border-2 border-gray-300 px-8 py-3 text-lg rounded-md hover:bg-gray-50 transform hover:scale-105 transition-all duration-300">
+            View Leaderboard
+          </a>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-6 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="text-2xl font-bold mb-2">1,247</div>
+          <div class="text-sm text-gray-600">Total Questions</div>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-6 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19h16M4 15h16M4 11h16M4 7h16M4 3h16"/></svg>
+          </div>
+          <div class="text-2xl font-bold mb-2">8</div>
+          <div class="text-sm text-gray-600">Your Questions</div>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-6 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 19l-7-7 7-7"/></svg>
+          </div>
+          <div class="text-2xl font-bold mb-2">23</div>
+          <div class="text-sm text-gray-600">Your Answers</div>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-6 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-6 w-6 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/></svg>
+          </div>
+          <div class="text-2xl font-bold mb-2">31</div>
+          <div class="text-sm text-gray-600">Your Contributions</div>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-6 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          </div>
+          <div class="text-2xl font-bold mb-2">456</div>
+          <div class="text-sm text-gray-600">Your Rating</div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Ask Questions</h3>
+          <p class="text-gray-600">Get help from our community of experts. Ask anything and receive detailed, helpful answers.</p>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Share Knowledge</h3>
+          <p class="text-gray-600">Help others by sharing your expertise. Answer questions and build your reputation.</p>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8 text-center hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Earn Recognition</h3>
+          <p class="text-gray-600">Build your reputation, earn badges, and climb the leaderboard as you contribute.</p>
+        </div>
+      </section>
+
+      <section class="text-center">
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-xl p-12">
+          <h2 class="text-3xl font-bold mb-4">Ready to Join Our Community?</h2>
+          <p class="text-xl mb-8 opacity-90">Start asking questions, sharing knowledge, and connecting with fellow developers today!</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="/register" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold rounded-md transform hover:scale-105 transition-all duration-300">
+              Sign Up Now
+            </a>
+            <a href="/login" class="border border-white text-white hover:bg-white/10 px-8 py-3 text-lg rounded-md transform hover:scale-105 transition-all duration-300">
+              Already a Member?
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
