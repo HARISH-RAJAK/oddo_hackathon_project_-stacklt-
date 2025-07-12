@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask a Question - Knowledge Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen py-10 px-4">
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Ask a New Question</h1>
+
+    <form action="#" method="POST" class="space-y-6">
+      <div>
+        <label for="title" class="block mb-2 text-sm font-medium text-gray-700">Question Title</label>
+        <input type="text" id="title" name="title" placeholder="e.g., How to use useEffect in React?"
+          class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500" required />
+      </div>
+
+      <div>
+        <label for="tags" class="block mb-2 text-sm font-medium text-gray-700">Tags</label>
+        <input type="text" id="tags" name="tags" placeholder="e.g., react, javascript, hooks"
+          class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500" required />
+      </div>
+
+      <div>
+        <label for="description" class="block mb-2 text-sm font-medium text-gray-700">Question Details</label>
+        <textarea id="description" name="description" rows="6" placeholder="Explain your question in detail..."
+          class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500" required></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-medium transition-all duration-300 shadow-md">
+          Post Question
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
